@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>五子棋网页游戏</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero" aria-labelledby="game-title">
+      <p class="eyebrow">Gomoku / Renju</p>
+      <h1 id="game-title">五子棋</h1>
+      <p class="subtitle">双人同屏对弈，率先连成横、竖或斜向五子者获胜。</p>
+    </section>
+
+    <section class="game-card" aria-label="五子棋游戏区域">
+      <div class="toolbar">
+        <div class="status-panel" aria-live="polite">
+          <span class="stone black" aria-hidden="true"></span>
+          <span id="statusText">黑棋先手</span>
+        </div>
+        <div class="actions">
+          <button id="undoBtn" type="button">悔棋</button>
+          <button id="restartBtn" type="button">重新开始</button>
+        </div>
+      </div>
+
+      <div class="board-wrap">
+        <canvas id="board" width="600" height="600" aria-label="15乘15五子棋棋盘"></canvas>
+      </div>
+
+      <div class="info-grid">
+        <article>
+          <h2>规则</h2>
+          <p>玩家轮流落子，任意方向连续五枚同色棋子即可获胜。</p>
+        </article>
+        <article>
+          <h2>操作</h2>
+          <p>点击棋盘交叉点落子；游戏未结束时可悔棋一步。</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
